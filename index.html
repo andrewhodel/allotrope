@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Allotrope - a realtime data well and notification dashboard</title>
+<link type="text/css" rel="stylesheet" media="screen" href="screen.css" />
+</head>
+<body>
+
+<div id="cover">
+<p>Allotrope - a realtime data well and notification dashboard</p>
+<input type="password" id="key" />
+<br />
+<input type="button" id="login" value="login" />
+</div>
+
+<div class="tooltip"></div>
+
+<div id="jsbox">
+<input type="button" id="xjsbox" value="X" />
+<div id="scripts">
+scripts
+</div>
+<div id="editor">
+<textarea id="editortext"></textarea>
+<p id="editorcontrol">
+<select id="schedule">
+<option selected>Schedule</option>
+<option>every 5 minutes</option>
+<option>every hour</option>
+<option>every day</option>
+</select> <input type="button" id="save" value="Save" /> <input type="button" id="run" value="Run" />
+</p>
+<p>edit the file above, view the output below</p>
+</div>
+<div id="output">
+output
+</div>
+</div>
+
+<div id="header">
+<span style="float: left; margin-right: 40px; margin-left: 15px; font-style: italic; color: #fff; font-size:1.4em;">Allotrope</span>
+<span style="float: left;">
+<select id="manualexisting"><option selected>(NEW)</option></select> <input type="text" id="manualtitle" /> <input type="text" id="manualdata" size="6" /> <select id="manualgraph"><option selected>none</option><option value="g">GAUGE</option><option value="c">COUNTER</option></select> <input type="button" id="manualupdate" value="Manually Update" />
+</span>
+<span style="float: right; margin-left: 10px; margin-right: 15px;"><input type="button" id="logout" value="logout" /></span>
+<span style="float: right;"><input type="button" id="jsch" value="JS Scheduler" /></span>
+</div>
+
+<div id="updates">
+</div>
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="socket.io/socket.io.js"></script>
+<script src="jquery.epochago.js"></script>
+<script src="jquery.cookie.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
